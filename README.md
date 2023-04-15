@@ -10,7 +10,8 @@ ganache-cli -h 0.0.0.0
 
 Then in a second terminal, fire up The Graph's local dockerised [Graph Node](https://github.com/graphprotocol/graph-node):
 ```
-$ cd ../graph-node
+$ cd ..
+$ git clone git@github.com:graphprotocol/graph-node.git
 $ docker-compose up
 ```
 
@@ -22,6 +23,6 @@ $ cd ../erc20-subgraph-approvals
 yarn install && yarn codegen && yarn build && yarn create-local && yarn deploy-local
 ```
 
-The subgraph can now be queried at `http://localhost:8000/subgraphs/name/gosuto-inzasheru/erc20-subgraph/`.
+The subgraph can now be queried at `http://localhost:8000/subgraphs/name/gosuto-inzasheru/erc20-subgraph-approvals/`.
 
 Ganache (raw RPC calls) logs to stdout in its terminal, as does the graph node (via docker stdout).
