@@ -1,4 +1,4 @@
-specVersion: 0.0.2
+specVersion: 0.0.4
 description: ERC20 Subgraph
 schema:
   file: ./schema.graphql
@@ -11,19 +11,16 @@ dataSources:
       startBlock: 0
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.4
+      apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
         - Account
         - Token
         - TokenApproval
-        - TokenBalance
       abis:
         - name: ERC20
           file: ./abis/ERC20.json
       eventHandlers:
         - event: Approval(indexed address,indexed address,uint256)
           handler: handleApproval
-        - event: Transfer(indexed address,indexed address,uint256)
-          handler: handleTransfer
       file: ./src/mapping.ts
