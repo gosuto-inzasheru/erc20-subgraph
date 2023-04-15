@@ -12,6 +12,7 @@ Then in a second terminal, fire up The Graph's local dockerised [Graph Node](htt
 ```
 $ cd ..
 $ git clone git@github.com:graphprotocol/graph-node.git
+$ cd graph-node/docker
 $ docker-compose up
 ```
 
@@ -19,7 +20,7 @@ Be sure to note the [additional instructions here](https://github.com/graphproto
 
 Finally, in a third terminal, navigate back to the `erc20-subgraph-approvals` repo and deploy the subgraph locally:
 ```
-$ cd ../erc20-subgraph-approvals
+$ cd ../../erc20-subgraph-approvals
 yarn install && yarn codegen && yarn build && yarn create-local && yarn deploy-local
 ```
 
