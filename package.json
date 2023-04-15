@@ -1,11 +1,13 @@
 {
-  "name": "erc20-subgraph",
+  "name": "erc20-subgraph-approvals",
   "version": "0.0.1",
-  "description": "Subgraph for indexing all ERC20 token balances and approvals",
+  "description": "Subgraph for indexing all ERC20 token approvals",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy georgeroman/erc20-subgraph --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/"
+    "create-local": "graph create --node http://localhost:8020/ gosuto-inzasheru/erc20-subgraph",
+    "remove-local": "graph remove --node http://localhost:8020/ gosuto-inzasheru/erc20-subgraph",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 gosuto-inzasheru/erc20-subgraph"
   },
   "author": "George Roman",
   "license": "MIT",
